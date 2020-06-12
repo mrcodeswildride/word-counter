@@ -2,18 +2,24 @@
 <html>
 
 <head>
-    <title>Word Counter</title>
-    <meta name="viewport" content="width=device-width, initial-scale=0.5">
-    <link rel="stylesheet" href="stylesheet.css">
+	<title>Word Counter</title>
+	<meta name="viewport" content="width=device-width, initial-scale=0.5">
+	<link href="style.css" rel="stylesheet">
+	<script src="script.js" defer>
+
+	</script>
 </head>
 
 <body>
-    <h1>Word Counter</h1>
+	<h1>Word Counter</h1>
 
-    <textarea id="words"></textarea>
-    <p id="count">0 words</p>
+	<p id="note">
+		This word counter assumes there will be exactly one space between each word, no spaces before the first word, and no spaces
+		after the last word.
+	</p>
 
-    <script src="script.js"></script>
+	<textarea id="words"></textarea>
+  <p id="countParagraph">Words: 0</p>
 </body>
 
 </html>

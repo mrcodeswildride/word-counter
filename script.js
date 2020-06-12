@@ -1,18 +1,22 @@
-var wordsInput = document.getElementById("words");
-var countDisplay = document.getElementById("count");
+let words = document.getElementById(`words`)
+let countParagraph = document.getElementById(`countParagraph`)
 
-wordsInput.focus();
-wordsInput.addEventListener("input", count);
+words.addEventListener(`input`, countWords)
+words.focus()
 
-function count() {
-    var words = wordsInput.value.split(" ");
-    var numWords = 0;
+function countWords() {
+  if (words.value == ``) {
+    countParagraph.innerHTML = `Words: 0`
+  }
+  else {
+    let numSpaces = 0
 
-    for (var i = 0; i < words.length; i++) {
-        if (words[i] != "") {
-            numWords++;
-        }
+    for (let char of words.value) {
+      if (char == ` `) {
+        numSpaces = numSpaces + 1
+      }
     }
 
-    countDisplay.innerHTML = numWords + (numWords == 1 ? " word " : " words");
+    countParagraph.innerHTML = `Words: ${numSpaces + 1}`
+  }
 }
