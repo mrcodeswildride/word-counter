@@ -4,6 +4,7 @@ body {
 
 #note {
   max-width: 650px;
+  margin-bottom: 24px;
 }
 
 textarea {
