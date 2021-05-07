@@ -7,8 +7,7 @@ words.focus()
 function countWords() {
   if (words.value == ``) {
     countParagraph.innerHTML = `Words: 0`
-  }
-  else {
+  } else {
     let numSpaces = 0
 
     for (let char of words.value) {
